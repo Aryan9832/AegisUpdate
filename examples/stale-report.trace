@@ -1,0 +1,24 @@
+# One line per transition, in the order recorded by stale-report.tlc.txt.
+begin
+issue a
+image a 1
+apply a 1
+verify a
+install a
+commit a
+issue b
+image b 1
+apply b 1
+verify b
+install b
+fault b
+report b 1
+report a 1
+issue b
+image b 2
+apply b 2
+verify b
+install b
+commit b
+report b 2
+finalize

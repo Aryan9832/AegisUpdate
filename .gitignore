@@ -1,0 +1,6 @@
+.tools/
+states/
+*.old
+__pycache__/
+*.pyc
+*_TTrace_*

@@ -1,0 +1,798 @@
+Error: Invariant SoundFinalization is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ phase = "Staged"
+/\ epoch = 1
+/\ duplicated = FALSE
+/\ accepted = {}
+/\ pc = "Tick"
+/\ issued = {}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 0,
+        image |-> 0,
+        step |-> "Idle",
+        received |-> {},
+        verified |-> {},
+        installed |-> {} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 0,
+        image |-> 0,
+        step |-> "Idle",
+        received |-> {},
+        verified |-> {},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 2: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingOut"
+/\ epoch = 1
+/\ duplicated = FALSE
+/\ accepted = {}
+/\ pc = "Tick"
+/\ issued = {}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 0,
+        image |-> 0,
+        step |-> "Idle",
+        received |-> {},
+        verified |-> {},
+        installed |-> {} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 0,
+        image |-> 0,
+        step |-> "Idle",
+        received |-> {},
+        verified |-> {},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 3: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingOut"
+/\ epoch = 1
+/\ duplicated = FALSE
+/\ accepted = {}
+/\ pc = "Tick"
+/\ issued = {a}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {<<"Image", 1, 2>>, <<"Apply", 1, 2>>} @@ b :> {})
+/\ up = (a :> {} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 0,
+        image |-> 0,
+        step |-> "Idle",
+        received |-> {},
+        verified |-> {},
+        installed |-> {} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 0,
+        image |-> 0,
+        step |-> "Idle",
+        received |-> {},
+        verified |-> {},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 4: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingOut"
+/\ epoch = 1
+/\ duplicated = FALSE
+/\ accepted = {}
+/\ pc = "Tick"
+/\ issued = {a}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {<<"Apply", 1, 2>>} @@ b :> {})
+/\ up = (a :> {} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 0,
+        image |-> 1,
+        step |-> "Idle",
+        received |-> {<<1, 2>>},
+        verified |-> {},
+        installed |-> {} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 0,
+        image |-> 0,
+        step |-> "Idle",
+        received |-> {},
+        verified |-> {},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 5: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingOut"
+/\ epoch = 1
+/\ duplicated = FALSE
+/\ accepted = {}
+/\ pc = "Tick"
+/\ issued = {a}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Idle",
+        received |-> {<<1, 2>>},
+        verified |-> {},
+        installed |-> {} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 0,
+        image |-> 0,
+        step |-> "Idle",
+        received |-> {},
+        verified |-> {},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 6: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingOut"
+/\ epoch = 1
+/\ duplicated = FALSE
+/\ accepted = {}
+/\ pc = "Tick"
+/\ issued = {a}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Verified",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 0,
+        image |-> 0,
+        step |-> "Idle",
+        received |-> {},
+        verified |-> {},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 7: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingOut"
+/\ epoch = 1
+/\ duplicated = FALSE
+/\ accepted = {}
+/\ pc = "Tick"
+/\ issued = {a}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Installing",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 0,
+        image |-> 0,
+        step |-> "Idle",
+        received |-> {},
+        verified |-> {},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 8: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingOut"
+/\ epoch = 1
+/\ duplicated = FALSE
+/\ accepted = {}
+/\ pc = "Tick"
+/\ issued = {a}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {<<"Installed", 1, 2>>} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 0,
+        image |-> 0,
+        step |-> "Idle",
+        received |-> {},
+        verified |-> {},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 9: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingOut"
+/\ epoch = 1
+/\ duplicated = FALSE
+/\ accepted = {}
+/\ pc = "Tick"
+/\ issued = {a, b}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {<<"Image", 1, 2>>, <<"Apply", 1, 2>>})
+/\ up = (a :> {<<"Installed", 1, 2>>} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 0,
+        image |-> 0,
+        step |-> "Idle",
+        received |-> {},
+        verified |-> {},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 10: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingOut"
+/\ epoch = 1
+/\ duplicated = FALSE
+/\ accepted = {}
+/\ pc = "Tick"
+/\ issued = {a, b}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {<<"Apply", 1, 2>>})
+/\ up = (a :> {<<"Installed", 1, 2>>} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 0,
+        image |-> 1,
+        step |-> "Idle",
+        received |-> {<<1, 2>>},
+        verified |-> {},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 11: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingOut"
+/\ epoch = 1
+/\ duplicated = FALSE
+/\ accepted = {}
+/\ pc = "Tick"
+/\ issued = {a, b}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {<<"Installed", 1, 2>>} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Idle",
+        received |-> {<<1, 2>>},
+        verified |-> {},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 12: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingOut"
+/\ epoch = 1
+/\ duplicated = FALSE
+/\ accepted = {}
+/\ pc = "Tick"
+/\ issued = {a, b}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {<<"Installed", 1, 2>>} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Verified",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 13: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingOut"
+/\ epoch = 1
+/\ duplicated = FALSE
+/\ accepted = {}
+/\ pc = "Tick"
+/\ issued = {a, b}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {<<"Installed", 1, 2>>} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Installing",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 14: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingOut"
+/\ epoch = 1
+/\ duplicated = FALSE
+/\ accepted = {}
+/\ pc = "Tick"
+/\ issued = {a, b}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {<<"Installed", 1, 2>>} @@ b :> {<<"Fault", 1, 2>>})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Fault",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 15: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingBack"
+/\ epoch = 2
+/\ duplicated = FALSE
+/\ accepted = {}
+/\ pc = "Tick"
+/\ issued = {}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {<<"Installed", 1, 2>>} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Fault",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 16: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingBack"
+/\ epoch = 2
+/\ duplicated = FALSE
+/\ accepted = {a}
+/\ pc = "Tick"
+/\ issued = {}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Fault",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 17: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingBack"
+/\ epoch = 2
+/\ duplicated = FALSE
+/\ accepted = {a}
+/\ pc = "Tick"
+/\ issued = {b}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {<<"Image", 2, 1>>, <<"Apply", 2, 1>>})
+/\ up = (a :> {} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Fault",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 18: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingBack"
+/\ epoch = 2
+/\ duplicated = FALSE
+/\ accepted = {a}
+/\ pc = "Tick"
+/\ issued = {b}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {<<"Apply", 2, 1>>})
+/\ up = (a :> {} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 1,
+        image |-> 2,
+        step |-> "Idle",
+        received |-> {<<1, 2>>, <<2, 1>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 19: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingBack"
+/\ epoch = 2
+/\ duplicated = FALSE
+/\ accepted = {a}
+/\ pc = "Tick"
+/\ issued = {b}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 2,
+        image |-> 2,
+        step |-> "Idle",
+        received |-> {<<1, 2>>, <<2, 1>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 20: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingBack"
+/\ epoch = 2
+/\ duplicated = FALSE
+/\ accepted = {a}
+/\ pc = "Tick"
+/\ issued = {b}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 2,
+        image |-> 2,
+        step |-> "Verified",
+        received |-> {<<1, 2>>, <<2, 1>>},
+        verified |-> {<<1, 2>>, <<2, 1>>},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 21: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingBack"
+/\ epoch = 2
+/\ duplicated = FALSE
+/\ accepted = {a}
+/\ pc = "Tick"
+/\ issued = {b}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 0,
+        fence |-> 2,
+        image |-> 2,
+        step |-> "Installing",
+        received |-> {<<1, 2>>, <<2, 1>>},
+        verified |-> {<<1, 2>>, <<2, 1>>},
+        installed |-> {} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 22: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingBack"
+/\ epoch = 2
+/\ duplicated = FALSE
+/\ accepted = {a}
+/\ pc = "Tick"
+/\ issued = {b}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {} @@ b :> {<<"Installed", 2, 1>>})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 2,
+        fence |-> 2,
+        image |-> 2,
+        step |-> "Active",
+        received |-> {<<1, 2>>, <<2, 1>>},
+        verified |-> {<<1, 2>>, <<2, 1>>},
+        installed |-> {<<2, 1>>} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 23: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RollingBack"
+/\ epoch = 2
+/\ duplicated = FALSE
+/\ accepted = {a, b}
+/\ pc = "Tick"
+/\ issued = {b}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 2,
+        fence |-> 2,
+        image |-> 2,
+        step |-> "Active",
+        received |-> {<<1, 2>>, <<2, 1>>},
+        verified |-> {<<1, 2>>, <<2, 1>>},
+        installed |-> {<<2, 1>>} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+State 24: <Tick line 156, col 9 to line 263, col 72 of module AegisUpdate>
+/\ phase = "RolledBack"
+/\ epoch = 2
+/\ duplicated = FALSE
+/\ accepted = {a, b}
+/\ pc = "Tick"
+/\ issued = {b}
+/\ rebooted = FALSE
+/\ online = {a, b}
+/\ down = (a :> {} @@ b :> {})
+/\ up = (a :> {} @@ b :> {})
+/\ disconnected = FALSE
+/\ device = ( a :>
+      [ active |-> 2,
+        commit |-> 1,
+        fence |-> 1,
+        image |-> 1,
+        step |-> "Active",
+        received |-> {<<1, 2>>},
+        verified |-> {<<1, 2>>},
+        installed |-> {<<1, 2>>} ] @@
+  b :>
+      [ active |-> 1,
+        commit |-> 2,
+        fence |-> 2,
+        image |-> 2,
+        step |-> "Active",
+        received |-> {<<1, 2>>, <<2, 1>>},
+        verified |-> {<<1, 2>>, <<2, 1>>},
+        installed |-> {<<2, 1>>} ] )
+/\ tries = (a :> 0 @@ b :> 0)
+/\ pausedOnce = FALSE
+
+2551 states generated, 1087 distinct states found, 79 states left on queue.
+The depth of the complete state graph search is 24.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 4 and the 95th percentile is 2).
+Finished in 00s at (2026-11-19 12:39:22)
